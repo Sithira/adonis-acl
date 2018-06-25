@@ -12,7 +12,7 @@
     "test:cleanup": "rm -rf test/database && rm -rf test/tmp",
     "test:local": "NO_ANSI=false FORCE_COLOR=true DB=sqlite3 nyc node ./bin/index.js --local",
     "test:win": "set NO_ANSI=false && set FORCE_COLOR=true && set DB=sqlite3 && nyc node ./bin/index.js --win",
-    "test": "npm run test:local",
+    "test": "DB=sqlite3 nyc node ./bin/index.js --local",
     "lint": "standard",
     "lint:fix": "standard --fix",
     "precommit": "npm run test && lint-staged",
